@@ -5,4 +5,4 @@
 layout: home
 ---
 
-<h1>  te3st</h1>
+{% include hero-home.html %}
