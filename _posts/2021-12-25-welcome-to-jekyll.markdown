@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pizza Hood22xxxx"
+title:  "Pizza Hood22xxxx "
 type: "restaurant"
 date:   2021-12-24 00:01:58 +0530
 categories: jekyll update
