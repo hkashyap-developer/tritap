@@ -4,7 +4,8 @@
     <script>
         $(document).ready(function(){
                         $('.multiple-items').slick({
-
+                            prevArrow: '<div class="textxxxx"><i class="far fa-arrow-alt-circle-left"></i></div>',
+nextArrow: 'test1',
             dots: false,
             infinite: true,
             autoplay: true,
@@ -64,6 +65,30 @@
         position: relative;
         text-align: center;
     }
+
+
+    .slider.slider-nav.multiple-items.slick-initialized.slick-slider {
+    position:relative; 
+}
+    button.textxxxx.slick-arrow {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 99;
+    font-size:40px; 
+}
+
+i.far.fa-arrow-alt-circle-left::before {
+    font-size: 40px;
+}
+.slider-nav {
+    position: relative;
+}
+
+
+
+
+
     </style>
 
 </head>
