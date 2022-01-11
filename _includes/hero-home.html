@@ -1,1 +1,87 @@
-test
+
+<html>
+<head>
+    <script>
+        $(document).ready(function(){
+                        $('.multiple-items').slick({
+
+            dots: false,
+            infinite: true,
+            autoplay: true,
+    autoplaySpeed: 1000,
+    pauseOnHover: false,
+      pauseOnFocus: false,
+            speed: 300,
+            fade:true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+            });
+        });
+        </script>
+<style>
+
+    .main {
+      font-family:Arial;
+      width:100%;
+      display:block;
+      margin:0 auto;
+    }
+    h3 {
+        background: #fff;
+        color: #3498db;
+        font-size: 36px;
+        line-height: 400px;
+        margin: 10px;
+        padding: 2%;
+        position: relative;
+        text-align: center;
+    }
+    </style>
+
+</head>
+<body>
+
+    <div class="main">
+        <div class="slider slider-nav multiple-items">
+          <div><img src="https://knowpathology.com.au/wp-content/uploads/2018/07/Happy-Test-Screen-01.png" width="100%"></div>
+          <div><img src="https://cdn.hackernoon.com/hn-images/0*xMaFF2hSXpf_kIfG.jpg" width="100%"></div>
+          <div>3</div>
+          <div><img src="https://knowpathology.com.au/wp-content/uploads/2018/07/Happy-Test-Screen-01.png" width="100%"></div>
+          <div><img src="https://knowpathology.com.au/wp-content/uploads/2018/07/Happy-Test-Screen-01.png" width="100%"></div>
+        </div>
+      </div>
+    </body>
+     
+
+ 
+  
+        </html>
+    
