@@ -1,0 +1,33 @@
+<style>
+  .catBtnCstm2 {
+    padding:4px 8px; 
+    margin-bottom:12px; 
+    border-radius:4px; 
+    font-size:16px; 
+    margin-right:6px; 
+    border:none; 
+  }
+  .catListHead {
+    margin-bottom:14px; 
+  }
+  .catListHeadOtrBx2 {
+    position:sticky; 
+    top:280px; 
+    background-color:white; 
+    margin-top:60px; 
+  }
+  .mreShopHtFx {
+    top:340px; 
+  }
+</style>
+<div class="catListHeadOtrBx2 mreShopHtFx">
+<h2 class="catListHead">More Shops</h2>
+
+  {% for post in site.posts %}
+  {% if post.type=="restaurant" %}
+  <a href="{{ post.url }}"><button class="catBtnCstm2" onclick="">{{ post.title }}</button></a>
+  {% endif %}
+  {% endfor %}
+
+
+</div>

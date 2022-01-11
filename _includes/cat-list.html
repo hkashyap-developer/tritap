@@ -1,0 +1,151 @@
+<style>
+  .catBtnCstm {
+    padding:4px 8px; 
+    margin-bottom:12px; 
+    border-radius:4px; 
+    font-size:16px; 
+    margin-right:6px; 
+    border:none; 
+  }
+  .catListHead {
+    margin-bottom:14px; 
+  }
+  .catListHeadOtrBx {
+    position:sticky; 
+    top:64px; 
+    background-color:white; 
+  }
+</style>
+<div class="catListHeadOtrBx">
+<h2 class="catListHead">Categories</h2>
+{% assign flagVar3 ="" %}
+
+{% for product in site.data.pizza-hood %}
+  {% assign flagVar2=product.category | split: ", " %}
+
+  {% for member in flagVar2 %}
+    {% unless flagVar3 contains member  %}
+    {% assign flagVar3=flagVar3  | append: member | append: ", " %}
+    {% endunless %}
+  {% endfor %}
+  {% endfor %}
+
+
+  {% assign flagVar3 = flagVar3 | split: ", " %}
+  {% for member2 in flagVar3 %}
+  <script>
+    function only{{ member2 | remove: " " }}() {
+      document.querySelectorAll('.otrBxProduct').forEach(function(el) {
+   el.style.display = 'none';
+});
+document.querySelectorAll('.{{ member2 }}').forEach(function(el) {
+   el.style.display = 'block';
+});
+$(".catBtnCstm").css("background-color", "#EFEFEF");
+$(".catBtnCstm").css("color", "black");
+$(".{{ member2 }}-brdrFx").css("background-color", "black");
+$(".{{ member2 }}-brdrFx").css("color", "white");
+$(".otrBxProduct").css("border", "solid black 2px");
+document.getElementById("tickView").style.color="black"; 
+  document.getElementById("custLstHdrClrFfx").style.color="black";
+  $('#tickView').removeClass('tickViewShow');
+  $('#unTickVi').addClass('unTickViShow');
+
+
+  $("#clrFilterCstm").css("display", "block");
+
+  if(onlyConditionCstmVariable%2) {
+  onlyConditionCstmVariable++;
+  }
+$(".otrBxProduct").animate({opacity:0},200,"linear",function(){
+  $(this).animate({opacity:1},200);
+});
+    }
+  </script>
+
+  <button class="catBtnCstm {{ member2 }}-brdrFx" onclick="only{{ member2 | remove: " " }}();">{{ member2 }}</button>
+  {% endfor %}
+  <br>
+<button id="clrFilterCstm" style="border:none; padding:4px 8px; border-radius:20px; border:solid maroon 2px; background-color:white; color:maroon; margin-top:6px;" onclick="clearFilter();" ><i class="fa fa-times" aria-hidden="true"></i> Clear Filter</button>
+<br><br>
+  <div onclick="onlyConditionCstm();"><h2 class="catListHead" id="custLstHdrClrFfx"><span id="unTickVi" class="unTickViShow">▢</span><span id="tickView">☑</span>&nbsp;Only Veg</h2></div>
+
+</div>
+<style>
+#tickView {
+  display:none;
+}
+#unTickVi {
+  display:none;
+}
+#tickView.tickViewShow {
+  display:block;
+}
+#unTickVi.unTickViShow {
+  display:block;
+}
+h2.catListHead {
+  display:flex;
+}
+h2#custLstHdrClrFfx {
+    cursor: pointer;
+}
+.otrBxProduct.onlyVeg {
+    border: solid #25d366 2px;
+}
+#clrFilterCstm {
+  display:none; 
+}
+</style>
+<script>
+
+var onlyConditionCstmVariable=0;
+
+function onlyConditionCstm() {
+$(".catBtnCstm").css("background-color", "#EFEFEF");  
+$(".catBtnCstm").css("color", "black");
+$("#clrFilterCstm").css("display", "none");
+onlyConditionCstmVariable++;
+if(onlyConditionCstmVariable%2) {
+  $(".otrBxProduct").css("border", "solid #25D366");
+  $('#tickView').addClass('tickViewShow');
+  $('#unTickVi').removeClass('unTickViShow');
+  document.getElementById("tickView").style.color="#25D366"; 
+  document.getElementById("custLstHdrClrFfx").style.color="#25D366"; 
+    document.querySelectorAll('.otrBxProduct').forEach(function(el) {
+  el.style.display = 'none';
+  });
+  document.querySelectorAll('.veg').forEach(function(el) {
+  el.style.display = 'block';
+  });
+  $(".otrBxProduct").animate({opacity:0},200,"linear",function(){
+  $(this).animate({opacity:1},200);
+  });
+}
+else {
+  $(".otrBxProduct").css("border", "solid black 2px");
+  $('#tickView').removeClass('tickViewShow');
+  $('#unTickVi').addClass('unTickViShow');
+  document.getElementById("tickView").style.color="black"; 
+  document.getElementById("custLstHdrClrFfx").style.color="black"; 
+  document.querySelectorAll('.otrBxProduct').forEach(function(el) {
+  el.style.display = 'block';
+  });
+  $(".otrBxProduct").animate({opacity:0},200,"linear",function(){
+  $(this).animate({opacity:1},200);
+  });
+}
+}
+  
+
+
+function clearFilter() {
+
+  $("#clrFilterCstm").css("display", "none");
+  $(".otrBxProduct").css("display", "block");
+  $(".otrBxProduct").animate({opacity:0},200,"linear",function(){
+  $(this).animate({opacity:1},200);
+  });
+}
+
+</script>

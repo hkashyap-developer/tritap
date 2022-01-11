@@ -1,0 +1,71 @@
+<style>
+.adBnr1-otrBx {
+    border:solid rgb(196, 196, 196) 1px; 
+    border-radius:4px; 
+    width:90%; 
+    margin:40px 0px;
+    padding:20px; 
+}
+.adBnr1-otrBx:hover {
+    border:solid rgb(56, 56, 56) 1px; 
+}
+.adBnrOtrBx,.adBnrOtrBx2, .adBnrOtrBx3 {
+    position:fixed; 
+    bottom:0px; 
+    width:340px; 
+    box-sizing:border-box; 
+    display:none; 
+}
+
+</style>
+<a href="https://app.nishabharti.in">
+<div class="adBnrOtrBx adBnr1-otrBx">
+    <div class="adBnr1-R1">
+    <img src="ad-banner-1.png" width="100%" style="border-radius:4px;">
+    </div>  
+</div>
+</a>
+<a href="https://app.nishabharti.in">
+    <div class="adBnrOtrBx2 adBnr1-otrBx">
+        <div class="adBnr1-R1">
+        <img src="ad-banner-2.jpg" width="100%" style="border-radius:4px;">
+        </div>  
+    </div>
+    </a>
+    <a href="https://app.nishabharti.in">
+        <div class="adBnrOtrBx3 adBnr1-otrBx">
+            <div class="adBnr1-R1">
+            <img src="ad-banner-3.jpg" width="100%" style="border-radius:4px;">
+            </div>  
+        </div>
+        </a>
+<script>
+    $(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 400 & y<1800) {
+        $('.adBnrOtrBx').show();
+    } else {
+        $('.adBnrOtrBx').hide();
+    }
+
+});
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 1800 & y<3000) {
+        $('.adBnrOtrBx2').fadeIn();
+    } else {
+        $('.adBnrOtrBx2').fadeOut();
+    }
+
+});
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 3000 ) {
+        $('.adBnrOtrBx3').fadeIn();
+    } else {
+        $('.adBnrOtrBx3').fadeOut();
+    }
+
+});
+</script>
+    

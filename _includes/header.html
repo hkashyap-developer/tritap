@@ -1,0 +1,264 @@
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  box-sizing:border-box;
+  padding:0px; 
+  margin:0px; 
+  font-family:lato;
+  font-weight:800;
+}
+.x01-hdrBnr {
+  background-color:black;
+}
+.x01-hdrBnr-row1-c1,
+.x01-hdrBnr-row1-c3 {
+  display:flex; 
+  align-items:center;
+}
+
+.x01-hdrBnr-row1-c2 {
+  text-align:center;
+  letter-spacing:1.2px; 
+  text-transform:uppercase;
+  color:white;
+  height:40px;
+  display:flex;
+  align-items:center; 
+  justify-content:center;
+  padding:20px 0px; 
+  margin:20px 0px; 
+}
+
+.x01-hdrBnr-row1 {
+  display:flex; 
+}
+.x01-hdrBnr-button {
+  font-size:10px;
+  margin-right:40px;
+  padding:4px 8px;
+  padding-bottom:16px;
+  border:solid white 1px;
+  background:none; 
+  color:white; 
+  height:20px;
+  
+}
+.x01-hdrBnr-social {
+  font-size:22px;
+  margin-left:40px;
+  padding:0px; 
+  background:none; 
+  border:none; 
+  color:white; 
+}
+.container {
+  padding:0px 10px; 
+  max-width:1400px; 
+  margin:0 auto; 
+}
+.x01-hdrBnr-social i {
+  margin-left:12px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Cstm-MainNav-otrBx {
+  width:100%; 
+  background-color:#25d366;
+  color:white; 
+
+  position:sticky;
+  top:0px; 
+  z-index: 999;
+}
+.Cstm-MainNav-inrBx {
+  max-width:1400px; 
+  margin:0 auto; 
+  padding:12px 6px;
+
+  display:flex;
+  justify-content:space-between; 
+}
+.logoCont {
+  flex-space:1; 
+  max-width:200px; 
+  font-size:12px; 
+
+  display:flex;
+
+}
+.logoCont h2 {
+  min-width:300px; 
+}
+.menuCont {
+  flex-space:1; 
+  max-width:800px; 
+
+  display:flex; 
+  align-items:center; 
+}
+.menuCont li {
+  display:inline-block; 
+  margin-left:40px; 
+}
+#menuTogg-Label {
+  float:right; 
+}
+.menuItems {
+
+}
+#menuTogg {
+  display:none; 
+}
+#menuTogg-Label {
+  z-index:999999; 
+  font-size:18px; 
+}
+.headerIcon {
+  font-size:22px; 
+  margin-right:12px; 
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width:767px) {
+  .menuItems {
+    display:none; 
+  } 
+  #menuTogg:checked ~ .menuItems {
+    display:block; 
+  }
+  #menuTogg:checked ~ .menuCross {
+    display:block; 
+  }
+  .menuItems {
+  background: rgb(2,0,36);
+background: linear-gradient(13deg, rgba(2,0,36,1) 0%, rgba(19,19,19,1) 35%, rgba(2,0,36,1) 100%);
+
+    height:100vh;
+    width:60%; 
+    max-width:280px; 
+    padding-top:100px; 
+    position:fixed; 
+    top:0px; 
+    right:0px; 
+    transion:all 5s; 
+    animation:fade 5s; 
+  }
+  .menuItems li{
+    display:block; 
+    line-height:40px; 
+  }
+}
+@media(min-width:768px) {
+  #menuTogg-Label {
+    display:none; 
+  }
+  .hidInDesktp {
+      display:none !important; 
+  }
+}
+
+.needAssisCstm {
+  font-size:22px; 
+  line-height:28px; 
+  display:block;
+  margin-bottom:20px; 
+}
+.needAssisDesc {
+  line-height:18px;
+  display:block;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<div class="x01-hdrBnr">
+    <div class="container">
+      <div class="x01-hdrBnr-row1">
+        <div class="x01-hdrBnr-row1-c1">
+          <button class="x01-hdrBnr-button">JOBS</button>
+        </div>
+        <div class="x01-hdrBnr-row1-c2" style="margin:0 auto; max-width:800px;">
+          <marquee BEHAVIOR="alternate" SCROLLAMOUNT="6" >{{ site.description }}</marquee>
+        </div>
+        <div class="x01-hdrBnr-row1-c3">
+          <button class="x01-hdrBnr-social"><i class="fab fa-instagram"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <!-- MENU BREAKPOINT AT: 767px -->
+  
+  <div class="Cstm-MainNav-otrBx">
+    <div class="Cstm-MainNav-inrBx">
+      <div class="logoCont">
+        <a href="/" style="color:white; display:contents; "><img src="/favicon.gif" style="max-height:24px; margin-right:8px;"><h2>MIHU | MAY I HELP YOU</h2></a>
+      </div>    
+      <div class="menuCont">
+        <input type="checkbox" id="menuTogg">
+        <label for="menuTogg" id="menuTogg-Label"><span class="menuCross"><i class="fas fa-bars"></i> </span>MENU</label>
+        <div class="menuItems">
+          <ul>
+            <li class="hidInDesktp"><hr></li>  
+            <li class="hidInDesktp"><br class="hidInDesktp"><span class="needAssisCstm">Need Assistance?</span><span class="needAssisDesc">Our team is available 24x7 to take your call. Click on our number to give us a call!<br><br><a href="tel:+918699812196" style="text-decoration:none; color:white; ">+91-8699-81-2196</a></span></li>
+            <br class="hidInDesktp"><br class="hidInDesktp">
+            <li class="hidInDesktp"><hr class="hidInDesktp"></li> 
+            <br class="hidInDesktp"><br class="hidInDesktp">    
+            {% for page in site.pages %}  
+            {% if page.title %}  
+            <a href="{{ page.url }}" style="color:white; text-transform:uppercase;"><li>{{ page.title }}</li></a>
+            {% endif %}
+            {% endfor %}
+            <li class="cartItems">CART (<span id="cartItemQty">0</span>)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/61ca0c4980b2296cfdd3fd1e/1fnuk0058';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>

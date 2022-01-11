@@ -1,0 +1,23 @@
+
+
+<style>
+.whatsApSticky {
+    position:fixed; 
+    bottom:16px; 
+    right:100px; 
+    display:none; 
+}
+</style>
+<div class="ftrOtrBx" style="min-height:80px; display:flex; align-items:center; justify-content:center;"><p>T&C | About | Jobs | Fork</p></div>
+<div class="whatsApSticky"><a href="https://google.com"><img src="https://pngimg.com/uploads/whatsapp/whatsapp_PNG13.png" width="60px;"></a></div>
+<script>
+    $(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 200) {
+        $('.whatsApSticky').fadeIn();
+    } else {
+        $('.whatsApSticky').fadeOut();
+    }
+
+});
+</script>
