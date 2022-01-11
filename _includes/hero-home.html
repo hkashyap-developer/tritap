@@ -4,18 +4,13 @@
     <script>
         $(document).ready(function(){
                         $('.multiple-items').slick({
-                            prevArrow: '<div class="textxxxx"><i class="far fa-arrow-alt-circle-left"></i></div>',
-nextArrow: 'test1',
-            dots: false,
-            infinite: true,
-            autoplay: true,
-    autoplaySpeed: 1000,
-    pauseOnHover: false,
-      pauseOnFocus: false,
-            speed: 300,
-            fade:true,
+
+                            centerMode: true,
+  centerPadding: '200px',
             slidesToShow: 1,
             slidesToScroll: 1,
+            prevArrow: '<div class="textxxxx"><i class="far fa-arrow-alt-circle-left"></i></div>',
+            nextArrow: 'test1',
             responsive: [
                 {
                 breakpoint: 1024,
@@ -37,7 +32,8 @@ nextArrow: 'test1',
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    centerPadding: '20px'
                 }
                 }
                 // You can unslick at a given breakpoint now by adding:
@@ -85,7 +81,12 @@ i.far.fa-arrow-alt-circle-left::before {
     position: relative;
 }
 
-
+i.far.fa-arrow-alt-circle-left::before {
+    position: absolute;
+    z-index: 99;
+    color: white;
+    top: 44%;
+}
 
 
 
