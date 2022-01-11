@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rehmnani Hotel New
+title:  "Rehmnani Hotel New"
 type: "restaurant"
 date:   2021-11-24 00:01:58 +0530
 categories: jekyll update
