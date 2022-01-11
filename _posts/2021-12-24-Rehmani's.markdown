@@ -1,12 +1,16 @@
 ---
 layout: post
-title:  "Rehmani Biryani"
+title:  "Rehmnani Hotel New
 type: "restaurant"
 date:   2021-12-24 00:01:58 +0530
 categories: jekyll update
 img-url: "https://drive.google.com/uc?export=view&id=1MhYwAOYGLWCJn81fRb87smAXJrDpChyP" 
 shop-db: "pizza-hood"
+permalink: /tritap/shop/rehmani-hotel
 ---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -27,17 +31,12 @@ h1, h2 {
   max-width:400px;
   min-width:360px;
   margin:0 auto; 
-    margin-bottom:20px; 
-    border-radius:4px; 
-
-
+  margin-bottom:20px; 
+  border-radius:4px; 
 }
-
-
 .container {
   
 }
-
 .prdDesc-r1 {
   display:flex; 
 }
@@ -79,11 +78,9 @@ button.btnStyleCstm {
     font-radius:4px; 
 }
 span.cstmQtyPicker {
-    margin: 0 12px;
-    font-size: 18px;
-    /* margin-top: 5px; */
-    font-weight: 600;
-    /* padding-top: 8px; */
+  margin: 0 12px;
+  font-size: 18px;
+  font-weight: 600;
 }
 .varBtn {
   border:0px; 
@@ -106,8 +103,6 @@ span.cstmQtyPicker {
   width:100%; 
   font-size:24px; 
   display:none; 
-
-
 }
 .shopChkOtBtn.active { 
   display:block; 
@@ -120,6 +115,7 @@ span.cstmQtyPicker {
 <div class="container shopMainFlex">
 <div class="shopPgR1C1">
  {% include cat-list.html %}
+ {% include shop-list.html %}
  {% include ad-banner1.html %}
 </div>
 
@@ -129,7 +125,7 @@ span.cstmQtyPicker {
 <div class="otrBxProduct
   {%- assign flagVar=product.category | split: ', ' -%}
   {% for member in flagVar %}
-  {{ member }} 
+  {{ member | remove: " " }} 
   {%- endfor -%}
 ">  
 
@@ -172,7 +168,7 @@ span.cstmQtyPicker {
   </div>
   <div class="prdDesc-r2c2">
      <div class="priceQty-r1c2">
-        <button class="btnStyleCstm" onclick="dec{{ product.prod-id }}();">-</button><span id="{{ product.prod-id }}-qty" class="cstmQtyPicker {{ product2.prod-id }}qtyx3">0</span><button class="btnStyleCstm" onclick="inc{{ product.prod-id }}();">+</button>
+        <button class="btnStyleCstm" onclick="dec{{ product.prod-id }}();">-</button><span id="{{ product.prod-id }}-qty" class="test cstmQtyPicker {{ product2.prod-id }}qtyx3">0</span><button class="btnStyleCstm" onclick="inc{{ product.prod-id }}();">+</button>
       </div>
   </div>
 </div>
@@ -183,6 +179,7 @@ span.cstmQtyPicker {
 </div>
 
 <div class="shopPgR1C3">
+ {% include ad-banner2.html %}
 <style>
 .invoiceCstmOtrBx {
   background-color:rgba(0,0,0,0.04);
@@ -217,17 +214,37 @@ span.cstmQtyPicker {
   background-color:#25D366; 
   color:white; 
 }
-
+#emptyCart {
+  display:none; 
+  text-align: center;
+    margin-top: 22px;
+    font-size: 40;
+    color: #d8d8d8;
+}
+#remoProd {
+   color:#c8c8c8;
+}
+#remoProd:hover {
+   color:red;
+}
+#remoProdBtn {
+  background-color:none; 
+  border:none; 
+}
 </style>
 <div class="invoiceCstmOtrBx">
 <h3 class="invoiceCstm-hdr">Cart</h3><hr>
+<div id="emptyCart">
+  <i class="fas fa-cart-plus"></i>
+</div>
 <div class="invceItems-otrBx">
+
 <div class="invceItems-item">
 
 
 {% for product3 in site.data.pizza-hood %}
 
-<p id="{{ product3.prod-id }}qtyx4">{{ product3.name }}</p>
+<p id="{{ product3.prod-id }}qtyx4"><button id="remoProdBtn" onclick="{{ product3.prod-id }}remove('{{ product3.prod-id }}');"><i class="far fa-times-circle" id="remoProd"></i></button>&nbsp;&nbsp;{{ product3.name }}</p>
 
     {% endfor %}
 
@@ -249,49 +266,104 @@ span.cstmQtyPicker {
 
 <div>
 
+
+<script>var totalPrdct=0;</script>
     {% for product2 in site.data.pizza-hood %}
+<script>
 
-    <script>
-    var qty{{ product2.prod-id }}=0;
+  var netQty=0; 
+  var qty{{ product2.prod-id }}=0;
  
+  function inc{{ product2.prod-id }}() {
+    netQty++;
+    document.getElementById("cartItemQty").innerHTML=netQty;
+    qty{{ product2.prod-id }}++;
+    $("#emptyCart").css("display", "none"); 
+    var cookieVal{{ product2.prod-id }}=qty{{ product2.prod-id }};
+    var x=parseInt(cookieVal{{ product2.prod-id }});
+    document.cookie = 'qtyInCookie{{ product2.prod-id }}='+x+'; path=/'
+    var counter=qty{{ product2.prod-id }};
+    document.getElementById("{{ product2.prod-id }}qtyx2").innerHTML=counter;
+    document.getElementById("{{ product2.prod-id }}-qty").innerHTML=qty{{ product2.prod-id }};
+    document.getElementById("{{ product2.prod-id }}-qty").innerHTML=qty{{ product2.prod-id }};
+    invoiceToggl(counter);
+      {% for product5 in site.data.pizza-hood %}
+        qtyChkInc{{ product5.prod-id }}();
+      {% endfor %}      
+  }
 
 
-       
-
-        function inc{{ product2.prod-id }}() {
-            qty{{ product2.prod-id }}++;
-            
-                          var counter=qty{{ product2.prod-id }};
-            document.getElementById("{{ product2.prod-id }}qtyx2").innerHTML=counter;
-            
-            document.getElementById("{{ product2.prod-id }}-qty").innerHTML=qty{{ product2.prod-id }};
-            document.getElementById("{{ product2.prod-id }}-qty").innerHTML=qty{{ product2.prod-id }};
-            
-
-alert("test");
-            invoiceToggl();
-
+  function qtyChkInc{{ product2.prod-id }}() {
+    var flagx{{ product2.prod-id }} = document.getElementById("{{ product2.prod-id }}-qty").innerHTML;
+    if(flagx{{ product2.prod-id }}!=0) {
+    $("#{{ product2.prod-id }}qtyx4").css("display", "block"); 
+    $("#{{ product2.prod-id }}qtyx2").css("display", "block"); 
+    }
+        if(flagx{{ product2.prod-id }}==0) {
+          $("#{{ product2.prod-id }}qtyx4").css("display", "none"); 
+          $("#{{ product2.prod-id }}qtyx2").css("display", "none"); 
         }
+    }
+
 
 
             function dec{{ product2.prod-id }}() {
+          if (netQty>0) {
+          netQty--;
+          }
+          if(netQty==0) {
+            $("#emptyCart").css("display", "block"); 
+          }
+          else {
+            $("#emptyCart").css("display", "none"); 
+          }
+
               if(qty{{ product2.prod-id }}>0) {
               qty{{ product2.prod-id }}--;
               var counter=qty{{ product2.prod-id }};
             document.getElementById("{{ product2.prod-id }}qtyx2").innerHTML=counter;
             document.getElementById("{{ product2.prod-id }}-qty").innerHTML=qty{{ product2.prod-id }};
-
-
-    
               }
+
+                        {% for product6 in site.data.pizza-hood %}
+                 
+              qtyChkInc{{ product6.prod-id }}();
+          {% endfor %}
         }
 
-      function invoiceToggl() {
-          document.getElementById("{{ product2.prod-id }}qtyx2").style.display="none";
-          document.getElementById("{{ product2.prod-id }}qtyx4").style.display=none; 
-      }
+    function invoiceToggl(counter2) {
 
-        
+  $(".adBanner2-OtrBx").css("display", "none");
+      $(".invoiceCstmOtrBx").css("display", "block");
+
+
+   }
+
+
+
+  var flagRem="";
+  function {{ product2.prod-id }}remove(passedVal) {              /* function for removing from cart */
+
+    flagRem=document.getElementById(flagRem).innerHTML;
+
+    netQty=netQty-flagRem;
+    alert("YoYo"+flagRem);
+      flagRem=passedVal + "-qty";
+    document.getElementById(flagRem).innerHTML=0;                 /* 0 in product card */
+    $("#{{ product2.prod-id }}qtyx4").css("display", "none");     /* hiding product in cart */
+    $("#{{ product2.prod-id }}qtyx2").css("display", "none");     /* hiding product in cart */
+    alert("textxxxxxxx");
+    flagRem=passedVal + "qtyx2";
+    document.getElementById(flagRem).innerHTML="0";
+    
+  
+    counter=0; 
+  }
+
+
+
+
+
         function defOnLoad() {
                     document.getElementById("{{ product2.prod-id }}qtyx2").style.display="none";
           document.getElementById("{{ product2.prod-id }}qtyx4").style.display="none"; 
@@ -299,7 +371,7 @@ alert("test");
 
  window.onload=defOnLoad();
 
-   
+
       </script>
     {% endfor %}
 
