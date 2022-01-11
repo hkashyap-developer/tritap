@@ -5,12 +5,11 @@
         $(document).ready(function(){
                         $('.multiple-items').slick({
 
-                            centerMode: true,
-  centerPadding: '200px',
+
             slidesToShow: 1,
             slidesToScroll: 1,
-            prevArrow: '<div class="textxxxx"><i class="far fa-arrow-alt-circle-left"></i></div>',
-            nextArrow: '<div class="righArrow"><i class="far fa-arrow-alt-circle-right"></i></div>',
+            prevArrow: '<i class="far fa-arrow-alt-circle-left"></i>',
+            nextArrow: '<i class="far fa-arrow-alt-circle-right"></i>',
             responsive: [
                 {
                 breakpoint: 1024,
@@ -32,8 +31,7 @@
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerPadding: '20px'
+                    slidesToScroll: 1
                 }
                 }
                 // You can unslick at a given breakpoint now by adding:
@@ -66,16 +64,9 @@
     .slider.slider-nav.multiple-items.slick-initialized.slick-slider {
     position:relative; 
 }
-    button.textxxxx.slick-arrow {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: 99;
-    font-size:40px; 
-}
 
-i.far.fa-arrow-alt-circle-left::before {
-    font-size: 40px;
+
+
 }
 .slider-nav {
     position: relative;
@@ -86,8 +77,23 @@ i.far.fa-arrow-alt-circle-left::before {
     z-index: 99;
     color: white;
     top: 44%;
+    left:20px; 
+    font-size: 40px;
+    display:block;
 }
 
+
+i.far.fa-arrow-alt-circle-right::before {
+    position: absolute;
+    z-index: 99;
+    color: white;
+    top: 44%;
+    right: 20px;
+    font-size: 40px;
+}
+.slick-arrow {
+    display:block; 
+}
 
 
     </style>
