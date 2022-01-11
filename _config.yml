@@ -22,7 +22,7 @@ title: Tri Tap
 banner-ad: 
 email: contact@tritap.in
 description: A Multivendor Hyperlocal Marketplace
-baseurl: "/tritap" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
