@@ -6,6 +6,7 @@ date:   2021-12-24 00:01:58 +0530
 categories: jekyll update
 img-url: "https://drive.google.com/uc?export=view&id=1MhYwAOYGLWCJn81fRb87smAXJrDpChyP" 
 shop-db: "pizza-hood"
+permalink: jekyll/update/2021/12/24/welcome-to-jekyll-Copy-(2).html
 ---
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
