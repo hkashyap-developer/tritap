@@ -95,7 +95,7 @@ i.far.fa-arrow-alt-circle-right::before {
     display:block; 
 }
 .heroSlideCard-inr {
-  height:520px; 
+  height:420px; 
   display:flex;   
   flex-direction:row;   
 }
@@ -107,11 +107,12 @@ i.far.fa-arrow-alt-circle-right::before {
     justify-content:center; 
 }
 .heroSlideCard-C2 {
-    align-items:end; 
+    align-items:end;
+    height:auto;  
 }
 
 .heroC2-img {
-max-width:600px; height:100%; object-fit:contain;
+max-width:600px; max-height:100%; object-fit:contain;
 }
 
 @media(max-width:520px) {
@@ -121,6 +122,7 @@ max-width:600px; height:100%; object-fit:contain;
     .heroC2-img {
         max-width:80%; 
         margin:0 auto; 
+        max-height:400px; 
     }
 }
     </style>
