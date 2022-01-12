@@ -95,26 +95,40 @@ i.far.fa-arrow-alt-circle-right::before {
     display:block; 
 }
 .heroSlideCard-inr {
-  height:420px; 
+  height:520px; 
   display:flex;   
   flex-direction:row;   
 }
 .heroSlideCard-C1, .heroSlideCard-C2 {
     display:flex; 
     flex:1; 
-    color:red; 
-    align-items:center; 
     justify-content:center; 
 }
 .heroSlideCard-C2 {
     align-items:end;
     height:auto;  
 }
-
+.heroSlideCard-C1 {
+    flex-direction:column; 
+    margin-left:200px; 
+}
 .heroC2-img {
 max-width:600px; max-height:100%; object-fit:contain;
 }
-
+.slideHeading {
+    font-size:56px; 
+    margin-bottom:20px; 
+}
+.slideDesc {
+    font-size:24px; 
+    margin-right:120px; 
+    margin-bottom:20px; 
+}
+.slideBtn {
+    font-size:24px; 
+    padding:6px 18px; 
+    border:solid black 4px; 
+}
 @media(max-width:520px) {
     .heroSlideCard-inr {
       flex-direction:column; 
@@ -135,7 +149,12 @@ max-width:600px; max-height:100%; object-fit:contain;
           {% for slides in site.data.home-page %}
           <div class="heroSlideCard" style="background-image:url('https://drive.google.com/uc?export=view&id={{ slides.GooglImgId }}');">
             <div class="heroSlideCard-inr">
-            <div class="heroSlideCard-C1">col1</div>
+            <div class="heroSlideCard-C1">
+                <h2 class="slideHeading">{{ slides.heading }}</h2>
+                <p class="slideDesc">{{ slides.desc }}</p >
+                <a href="#"><button class="slideBtn">Book Now</button></a>
+
+            </div>
             <div class="heroSlideCard-C2"><img class="heroC2-img" src="https://drive.google.com/uc?export=view&id={{ slides.GooglImgIdInr }}" width="100%"></div>
         </div>
           </div>
