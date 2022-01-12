@@ -1,4 +1,9 @@
 - name: "The New Pizza"
-  prod-id: "X01"
-  counter: "0"
-  category: "cat2, cat3, veg"
+  GooglImgId: "1vpbovZy_YvXePTuiTzspExP15TTMSgzc"
+- name: "The New Pizza"
+  GooglImgId: "1g3MYgobtIO7erByCpKhAE2e_5VGHHg0V"
+- name: "The New Pizza"
+  GooglImgId: "1Brtk_Tns8MXHQe5255MGzkm3sQBhY-98"
+- name: "The New Pizza"
+  GooglImgId: "X01"
+
