@@ -4,14 +4,13 @@
 </head>
 <style>
 .iconShwCsOtrBx {
-  margin-top:80px; 
+  margin: 60px 20px; 
 }
 .iconShwCs-itrBx {
 border:solid rgb(228, 228, 228) 4px; 
 max-width:720px;
-padding:30px; 
-border-radius:4px; 
-margin:20pxs;      
+padding:12px; 
+border-radius:4px;    
 }
 .iconShwCsR1 {
   display:flex; 
@@ -20,8 +19,6 @@ margin:20pxs;
 }
 
 .iconShwCsR2 {
-
-  margin-top:20px; 
   display:flex; 
   justify-content:space-around; 
   flex-wrap:wrap; 
@@ -29,7 +26,6 @@ margin:20pxs;
 .iconShwCsR2Col {
   width:25%; 
   padding:0px; 
-  margin-bottom:20px; 
   margin-right:0px; 
   margin-left:0px; 
 }
@@ -41,14 +37,45 @@ margin:20pxs;
   font-size:36px; 
   margin-right:20px; 
 }
-@media(min-width:620px) {
+.iconShwCsR2Col {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+@media(max-width:620px) {
+  .iconShwCsR1C1 {
+  font-size:22px; 
+  margin-left:12px; 
+  }
+  .iconShwCsR1C2 {
+  font-size:22px; 
+  margin-right:12px; 
+  }
+  .servLstCstm {
+    text-align:center; 
+    font-size:12px; 
+  }
+  .topHdCstm {
+    width:80%; 
+    background-color:rgb(231, 231, 7); 
+    color:black;
+    font-size:10px; 
+    padding:2px 8px; 
+    border-radius:6px; 
+    text-align:center;
+    display:inline-block; 
+    font-weight:600; 
+  }
+}
+
+@media(min-width:621px) {
   .iconShwCs-itrBx {
     margin:0 auto; 
   }
   .iconShwCsR2Col {
    width:25%; 
-   padding:18px; 
-   margin-bottom:20px; 
+   padding:18px;  
   }
 }
 </style>
@@ -66,10 +93,13 @@ margin:20pxs;
   </div>
   <div class="iconShwCsR2">
     <div class="iconShwCsR2">
-      <div class="iconShwCsR2Col"><img src="https://drive.google.com/uc?export=view&id=12SUlx7X3y4oDg-WeW20nwbyEb59bvTLX" width="100%"></div>
-      <div class="iconShwCsR2Col"><img src="https://drive.google.com/uc?export=view&id=1wCmZ5quIQ1VOKYNEo7N8rRRDi1Sy-KV-" width="100%"></div>
-      <div class="iconShwCsR2Col"><img src="https://drive.google.com/uc?export=view&id=1Hzr8Uv4cndzndvBWTbz67PjC-nQEvPIr" width="100%"></div>
-      <div class="iconShwCsR2Col"><img src="https://drive.google.com/uc?export=view&id=1oVzS39Av35QAlEgOsYuC9d-vbdH8N1BY" width="100%"></div>
+      {% for servlist in site.data.service-card-icon %}
+      <div class="iconShwCsR2Col">
+        <div>{% if servlist.head-true == 'true' %}<span class="topHdCstm">{{ servlist.topHead }}</span>{% endif %}</div>
+        <img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%">
+        <div><p class="servLstCstm">{{ servlist.title }}</p></div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 <div>

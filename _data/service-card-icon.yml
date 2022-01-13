@@ -1,0 +1,24 @@
+- name: "Laundry"
+  topHead: "test"
+  head-true: "false"
+  googImg: "1oVzS39Av35QAlEgOsYuC9d-vbdH8N1BY"  
+  title: "Laundry"
+
+- name: "Makeup"
+  topHead: "test"
+  head-true: "true"
+  googImg: "1oVzS39Av35QAlEgOsYuC9d-vbdH8N1BY"
+  title: "Makeups"
+
+- name: "Food"
+  topHead: "test"
+  head-true: "true"
+
+  googImg: "1oVzS39Av35QAlEgOsYuC9d-vbdH8N1BY"  
+  title: "Food"
+
+- name: "Cleaning"
+  topHead: "test"
+  head-true: "true"
+  googImg: "1oVzS39Av35QAlEgOsYuC9d-vbdH8N1BY"
+  title: "Cleaning"
