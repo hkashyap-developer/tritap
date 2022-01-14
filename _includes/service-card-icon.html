@@ -105,7 +105,7 @@ border-radius:4px;
     <div class="iconShwCsR1C1">
 
       <div>{{ site.data.service-card-icon.cardHead }}</div>
-      <div class="cardDescX01">{{ site.data.service-card-icon.cardDesc }}</div>
+      {% if site.data.service-card-icon.cardDesc %}<div class="cardDescX01">{{ site.data.service-card-icon.cardDesc }}</div>{% endif %}
 
     </div>
     <div class="iconShwCsR1C2">
@@ -124,7 +124,7 @@ border-radius:4px;
     </div>
   </div>
   <div class="iconShwCsR3">
-    <div class="cardFooterCTA">{{ site.data.service-card-icon.footerCTAtxt }}</div>
+    {% if site.data.service-card-icon.footerCTAtxt %}<div class="cardFooterCTA">{{ site.data.service-card-icon.footerCTAtxt }}</div>{% endif %}
   </div>
 <div>
 </div>
