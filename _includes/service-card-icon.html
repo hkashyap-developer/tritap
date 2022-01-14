@@ -153,11 +153,11 @@ var toolTipFlag=1;
 $( document ).ready(function() {
   $(".moreCardIcon").click(function(){
     if(toolTipFlag%2) {
-      $(".cardToolTip").css("display", "block");
+      $(".cardToolTip").show(200);
       toolTipFlag++; 
     }
     else {
-      $(".cardToolTip").css("display", "none");
+      $(".cardToolTip").hide(200);
       toolTipFlag++; 
     }
   });
