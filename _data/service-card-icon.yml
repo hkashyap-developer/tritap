@@ -1,3 +1,5 @@
+cardHead: "Super Market"
+
 serviceIcons:
   - name: "Laundry"
     topHead: "test"
