@@ -7,4 +7,3 @@ layout: home
 
 {% include hero-home.html %}
 {% include service-card-icon.html %}
-{% include service-card-icon.html %}

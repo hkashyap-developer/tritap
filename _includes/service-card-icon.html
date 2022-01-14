@@ -150,10 +150,18 @@ border-radius:4px;
 </div>
 
 <script>
-
+var toolTipFlag=1; 
 $( document ).ready(function() {
   $(".moreCardIcon").click(function(){
+    if(toolTipFlag%2) {
       $(".cardToolTip").css("display", "block");
+      alert("test");
+      toolTipFlag++; 
+    }
+    else {
+      $(".cardToolTip").css("display", "none");
+      toolTipFlag++; 
+    }
   });
 });
 
