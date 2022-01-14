@@ -1,15 +1,15 @@
 cardHead: "Super Market"
 cardDesc: "A Multi-vendor Hyperlocal Marketplace"
-footerCTAtxt: "Enjoying services?✌️ Give us a Feedback ✍🏻"
+footerCTAtxt: "How's that?✌️ Give us a Feedback ✍🏻"
 
 serviceIcons:
   - name: "Cleaning"
-    topHead: "test"
+    topHead: "Tri Tap"
     head-true: "true"
     googImg: "1EUxtwrZJ1v-UB1gqdH__Adqec9PIX1mA"
     title: "Cleaning"
   - name: "Makeup"
-    topHead: "test"
+    topHead: "20% OFF"
     head-true: "true"
     googImg: "1n57KCKFndV8pWH4yVVMzFQC-MKY-JiZP"
     title: "Makeups"
