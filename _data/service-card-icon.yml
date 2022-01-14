@@ -1,4 +1,5 @@
 cardHead: "Super Market"
+cardDesc: "A Multi-vendor Hyperlocal Marketplace"
 
 serviceIcons:
   - name: "Laundry"

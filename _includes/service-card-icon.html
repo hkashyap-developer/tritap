@@ -70,6 +70,12 @@ border-radius:4px;
     display:inline-block; 
     font-weight:600; 
   }
+  .cardDescX01 {
+    font-size:13px; 
+    color: rgb(128, 128, 128); 
+    font-weight:500;
+    margin:4px 0px;  
+  }
 }
 
 @media(min-width:621px) {
@@ -89,7 +95,8 @@ border-radius:4px;
   <div class="iconShwCsR1">
     <div class="iconShwCsR1C1">
 
-      {{ site.data.service-card-icon.cardHead }}
+      <div>{{ site.data.service-card-icon.cardHead }}</div>
+      <div class="cardDescX01">{{ site.data.service-card-icon.cardDesc }}</div>
 
     </div>
     <div class="iconShwCsR1C2">
