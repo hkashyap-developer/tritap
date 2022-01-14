@@ -85,6 +85,9 @@ border-radius:4px;
     padding:4px 8px 6px 8px; 
     border-radius:4px; 
   }
+  .imgWrapServ {
+    margin:0px 12px; 
+  }
 }
 
 @media(min-width:621px) {
@@ -117,7 +120,7 @@ border-radius:4px;
       {% for servlist in site.data.service-card-icon.serviceIcons %}
       <div class="iconShwCsR2Col">
         <div>{% if servlist.head-true == 'true' %}<span class="topHdCstm">{{ servlist.topHead }}</span>{% endif %}</div>
-        <img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%">
+        <div class="imgWrapServ"><img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%"></div>
         <div><p class="servLstCstm">{{ servlist.title }}</p></div>
       </div>
       {% endfor %}
