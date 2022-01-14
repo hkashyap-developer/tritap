@@ -1,6 +1,7 @@
 cardHead: "Super Market"
 cardDesc: "A Multi-vendor Hyperlocal Marketplace"
 footerCTAtxt: "How's that?✌️ Give us a Feedback ✍🏻"
+cardToolTip: "test How's that?✌️ Give us a Feedback ✍🏻"
 
 serviceIcons:
   - name: "Cleaning"

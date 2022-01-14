@@ -76,6 +76,17 @@ border-radius:4px;
     font-weight:500;
     margin:4px 0px;  
   }
+  .cardToolTip {
+    font-size:13px; 
+    color: rgb(128, 128, 128); 
+    font-weight:500;
+    width: 100%;
+    border: solid #25d366 1px;
+    padding: 2px 4px 4px 4px;
+    border-radius: 4px;  
+    margin:12px 12px 0px 12px; 
+    display:none; 
+  }
   .cardFooterCTA {
     font-size:13px; 
     color: rgb(41, 41, 41); 
@@ -109,12 +120,16 @@ border-radius:4px;
 
       <div>{{ site.data.service-card-icon.cardHead }}</div>
       {% if site.data.service-card-icon.cardDesc %}<div class="cardDescX01">{{ site.data.service-card-icon.cardDesc }}</div>{% endif %}
+    
 
+      
     </div>
     <div class="iconShwCsR1C2">
-      <i class="far fa-question-circle"></i>
+      <div class="moreCardIcon"><i class="far fa-question-circle"></i></div>
     </div>
   </div>
+  {% if site.data.service-card-icon.cardToolTip %}<div class="cardToolTip">{{ site.data.service-card-icon.cardToolTip }}</div>{% endif %}
+
   <div class="iconShwCsR2">
     <div class="iconShwCsR2">
       {% for servlist in site.data.service-card-icon.serviceIcons %}
@@ -133,3 +148,13 @@ border-radius:4px;
 </div>
 </div>
 </div>
+
+<script>
+
+$( document ).ready(function() {
+  $(".moreCardIcon").click(function(){
+      $(".cardToolTip").css("display", "block");
+  });
+});
+
+</script>
