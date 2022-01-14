@@ -96,7 +96,7 @@ border-radius:4px;
   </div>
   <div class="iconShwCsR2">
     <div class="iconShwCsR2">
-      {% for servlist in site.data.service-card-icon %}
+      {% for servlist in site.data.service-card-icon.serviceIcons %}
       <div class="iconShwCsR2Col">
         <div>{% if servlist.head-true == 'true' %}<span class="topHdCstm">{{ servlist.topHead }}</span>{% endif %}</div>
         <img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%">
