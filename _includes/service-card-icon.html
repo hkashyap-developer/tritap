@@ -116,14 +116,16 @@ border-radius:4px;
 }
 </style>
 <body>
-
+{% assign dbObj = site.data.service-card-icon.cardToolTip %}
+<script>
+alert("{{ dbObj }}");</script>
 <div class="iconShwCsOtrBx">
 <div class="iconShwCs-itrBx">
   <div class="iconShwCsR1">
     <div class="iconShwCsR1C1">
 
-      <div>{{ site.data.service-card-icon.cardHead }}</div>
-      {% if site.data.service-card-icon.cardDesc %}<div class="cardDescX01">{{ site.data.service-card-icon.cardDesc }}</div>{% endif %}
+      <div>{{ dbObj.cardHead }}</div>
+      {% if dbObj.cardDesc %}<div class="cardDescX01">{{ dbObj.cardDesc }}</div>{% endif %}
     
 
       
