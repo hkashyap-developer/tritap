@@ -1,8 +1,8 @@
-cardHead: "Super Market"
-dabasID: "super-market"
-cardDesc: "A Multi-vendor Hyperlocal Marketplace"
-footerCTAtxt: "How's that?✌️ Give us a Feedback ✍🏻"
-cardToolTip: "MIHU, May I Help You is basically your local market your your fingertip. Explore our services here."
+cardHead: "Super Market 2"
+dabasID: "super-market2"
+cardDesc: "A Multi-vendor Hyperlocal Marketplace2"
+footerCTAtxt: "How's that?✌️ Give us a Feedback ✍🏻2"
+cardToolTip: "MIHU, May I Help You is basically your local market your your fingertip. Explore our services here.2"
 
 serviceIcons:
   - name: "Cleaning"

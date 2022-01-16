@@ -76,7 +76,7 @@ border-radius:4px;
     font-weight:500;
     margin:4px 0px;  
   }
-  .cardToolTip {
+  .cardToolTip-{{ include.cardDByml }} {
     font-size:13px; 
     color: rgb(128, 128, 128); 
     font-weight:500;
@@ -116,29 +116,29 @@ border-radius:4px;
 }
 </style>
 <body>
-{% assign dbObj = site.data.service-card-icon.cardToolTip %}
+{% assign dbObj = include.cardDByml %}
+{% assign x = site.data[dbObj] %}
 <script>
-alert("{{ dbObj }}");</script>
+alert("{{ x }}");
+</script>
 <div class="iconShwCsOtrBx">
 <div class="iconShwCs-itrBx">
   <div class="iconShwCsR1">
     <div class="iconShwCsR1C1">
 
-      <div>{{ dbObj.cardHead }}</div>
-      {% if dbObj.cardDesc %}<div class="cardDescX01">{{ dbObj.cardDesc }}</div>{% endif %}
-    
+      <div>{{ x.cardHead }}</div>
+      <div class="cardDescX01">{{ x.cardDesc }}</div>
 
-      
     </div>
     <div class="iconShwCsR1C2">
-      <div class="moreCardIcon"><i class="far fa-question-circle"></i></div>
+      <div class="moreCardIcon-{{ include.cardDByml }}"><i class="far fa-question-circle"></i></div>
     </div>
   </div>
-  {% if site.data.service-card-icon.cardToolTip %}<div class="cardToolTip">{{ site.data.service-card-icon.cardToolTip }}</div>{% endif %}
+  {% if x.cardToolTip %}<div class="cardToolTip-{{ include.cardDByml }}">{{ x.cardToolTip }}</div>{% endif %}
 
   <div class="iconShwCsR2">
     <div class="iconShwCsR2">
-      {% for servlist in site.data.service-card-icon.serviceIcons %}
+      {% for servlist in x.serviceIcons %}
       <div class="iconShwCsR2Col">
         <div>{% if servlist.head-true == 'true' %}<span class="topHdCstm">{{ servlist.topHead }}</span>{% endif %}</div>
         <div class="imgWrapServ"><img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%"></div>
@@ -148,7 +148,7 @@ alert("{{ dbObj }}");</script>
     </div>
   </div>
   <div class="iconShwCsR3">
-    {% if site.data.service-card-icon.footerCTAtxt %}<div class="cardFooterCTA">{{ site.data.service-card-icon.footerCTAtxt }}</div>{% endif %}
+    {% if x.footerCTAtxt %}<div class="cardFooterCTA">{{ x.footerCTAtxt }}</div>{% endif %}
   </div>
 <div>
 </div>
@@ -158,13 +158,13 @@ alert("{{ dbObj }}");</script>
 <script>
 var toolTipFlag=1; 
 $( document ).ready(function() {
-  $(".moreCardIcon").click(function(){
+  $(".moreCardIcon-{{ include.cardDByml }}").click(function(){
     if(toolTipFlag%2) {
-      $(".cardToolTip").show(200);
+      $(".cardToolTip-{{ include.cardDByml }}").show(200);
       toolTipFlag++; 
     }
     else {
-      $(".cardToolTip").hide(200);
+      $(".cardToolTip-{{ include.cardDByml }}").hide(200);
       toolTipFlag++; 
     }
   });
