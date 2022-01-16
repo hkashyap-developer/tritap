@@ -3,6 +3,9 @@
 <title>Page Title</title>
 </head>
 <style>
+  .moduleCstm {
+    display:none; 
+  }
 .iconShwCsOtrBx {
   margin: 32px 20px; 
 }
@@ -121,7 +124,7 @@ border-radius:4px;
 <script>
 alert("{{ x }}");
 </script>
-<div class="iconShwCsOtrBx">
+<div class="iconShwCsOtrBx moduleCstm">
 <div class="iconShwCs-itrBx">
   <div class="iconShwCsR1">
     <div class="iconShwCsR1C1">
@@ -167,6 +170,7 @@ $( document ).ready(function() {
       $(".cardToolTip-{{ include.cardDByml }}").hide(200);
       toolTipFlag++; 
     }
+    
   });
 });
 

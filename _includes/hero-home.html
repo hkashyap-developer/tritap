@@ -42,7 +42,9 @@
             });
             </script>
     <style>
-    
+    .heroBannerCstmX01 {
+        display:none; 
+    }
         .main {
           font-family:Arial;
           width:100%;
@@ -229,7 +231,7 @@
     </head>
     <body>
     
-        <div class="main">
+        <div class="main heroBannerCstmX01">
             <div class="slider slider-nav multiple-items">
               {% for slides in site.data.home-page %}
               <div class="heroSlideCard" style="background-image:url('https://drive.google.com/uc?export=view&id={{ slides.GooglImgId }}');">
