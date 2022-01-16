@@ -1,7 +1,7 @@
 cardHead: "Super Market 2"
 dabasID: "super-market2"
 cardDesc: "A Multi-vendor Hyperlocal Marketplace2"
-footerCTAtxt: "How's that?✌️ Give us a Feedback ✍🏻2"
+footerCTAtxt: ""
 cardToolTip: "MIHU, May I Help You is basically your local market your your fingertip. Explore our services here.2"
 
 serviceIcons:
@@ -15,13 +15,3 @@ serviceIcons:
     head-true: "true"
     googImg: "1n57KCKFndV8pWH4yVVMzFQC-MKY-JiZP"
     title: "Makeups"
-  - name: "Laundry"
-    topHead: "test"
-    head-true: "false"
-    googImg: "18G7TEHKfmeZmx9UeAcUJDSe1dau-mKi-"  
-    title: "Laundry"
-  - name: "Food"
-    topHead: "test"
-    head-true: "true"
-    googImg: "19LpCwCOMJgUl6ZacPCLCdhKHVL6RhZjP"  
-    title: "Food"
