@@ -1,17 +1,17 @@
-cardHead: "Super Market 2"
+cardHead: "Offers"
 dabasID: "super-market2"
-cardDesc: "A Multi-vendor Hyperlocal Marketplace2"
-footerCTAtxt: ""
+cardDesc: "Grab best offers from HYPERLOOP here."
+footerCTAtxt: 
 cardToolTip: "MIHU, May I Help You is basically your local market your your fingertip. Explore our services here.2"
 
 serviceIcons:
   - name: "Cleaning"
-    topHead: "Tri Tap"
+    topHead: 
     head-true: "true"
-    googImg: "1EUxtwrZJ1v-UB1gqdH__Adqec9PIX1mA"
+    googImg: "1K-2NnbxL0ixLeirQ0fb--VIpSJXKvcuG"
     title: "Cleaning"
   - name: "Makeup"
-    topHead: "20% OFF"
+    topHead: 
     head-true: "true"
-    googImg: "1n57KCKFndV8pWH4yVVMzFQC-MKY-JiZP"
+    googImg: "1gmP3Yfoyb8gS7LTCxGrs2YX7xdrMfxFQ"
     title: "Makeups"

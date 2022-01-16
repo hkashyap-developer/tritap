@@ -154,9 +154,11 @@ alert("{{ x }}");
       {% endfor %}
     </div>
   </div>
+  {% if x.footerCTAtxt %}
   <div class="iconShwCsR3">
-    {% if x.footerCTAtxt %}<div class="cardFooterCTA">{{ x.footerCTAtxt }}</div>{% endif %}
+    <div class="cardFooterCTA">{{ x.footerCTAtxt }}</div>
   </div>
+  {% endif %}
 <div>
 </div>
 </div>
