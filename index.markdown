@@ -6,6 +6,6 @@ layout: home
 ---
 
 {% include hero-home.html %}
-{% include service-card-icon.html cardDByml="service-card-icon" %}
-{% include service-card-icon.html cardDByml="service-card-icon-2" %}
+{% include service-card-icon.html cardDByml="service-card-icon" iconWidth="25%"%}
+{% include service-card-icon.html cardDByml="service-card-icon-2" iconWidth="50%"%}
 {% include footer.html %}

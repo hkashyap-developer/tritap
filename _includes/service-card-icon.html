@@ -26,9 +26,13 @@ border-radius:4px;
   justify-content:space-around; 
   flex-wrap:wrap; 
 }
-.iconShwCsR2Col {
+.{{ include.cardDByml }}-iconShwCsR2Col {
   align-items: center;
-  width:25%; 
+
+
+  width:{{ include.iconWidth }}; 
+  
+  
   padding:0px; 
   margin-right:0px; 
   margin-left:0px; 
@@ -41,12 +45,12 @@ border-radius:4px;
   font-size:36px; 
   margin-right:20px; 
 }
-.iconShwCsR2Col {
+.{{ include.cardDByml }}-iconShwCsR2Col {
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
-.iconShwCsR2Col {
+.{{ include.cardDByml }}-iconShwCsR2Col {
     margin-top: 18px;
 }
 
@@ -112,7 +116,7 @@ border-radius:4px;
   .iconShwCs-itrBx {
     margin:0 auto; 
   }
-  .iconShwCsR2Col {
+  {{ include.cardDByml }}-.iconShwCsR2Col {
    width:25%; 
    padding:18px;  
   }
@@ -142,7 +146,7 @@ alert("{{ x }}");
   <div class="iconShwCsR2">
     <div class="iconShwCsR2">
       {% for servlist in x.serviceIcons %}
-      <div class="iconShwCsR2Col">
+      <div class="{{ include.cardDByml }}-iconShwCsR2Col">
         <div>{% if servlist.head-true == 'true' %}<span class="topHdCstm">{{ servlist.topHead }}</span>{% endif %}</div>
         <div class="imgWrapServ"><img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%"></div>
         <div><p class="servLstCstm">{{ servlist.title }}</p></div>
