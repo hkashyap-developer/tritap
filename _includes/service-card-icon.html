@@ -51,7 +51,7 @@ border-radius:4px;
     justify-content: end;
 }
 .{{ include.cardDByml }}-iconShwCsR2Col {
-    margin-top: 18px;
+    margin-top: 8px;
 }
 
 @media(max-width:620px) {
@@ -147,7 +147,7 @@ alert("{{ x }}");
     <div class="iconShwCsR2">
       {% for servlist in x.serviceIcons %}
       <div class="{{ include.cardDByml }}-iconShwCsR2Col">
-        <div>{% if servlist.head-true == 'true' %}<span class="topHdCstm">{{ servlist.topHead }}</span>{% endif %}</div>
+        <div>{% if servlist.topHead %}<span class="topHdCstm">{{ servlist.topHead }}</span>{% endif %}</div>
         <div class="imgWrapServ"><img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%"></div>
         <div><p class="servLstCstm">{{ servlist.title }}</p></div>
       </div>

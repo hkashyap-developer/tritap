@@ -7,11 +7,9 @@ cardToolTip: "MIHU, May I Help You is basically your local market your your fing
 serviceIcons:
   - name: "Cleaning"
     topHead: 
-    head-true: "true"
     googImg: "1K-2NnbxL0ixLeirQ0fb--VIpSJXKvcuG"
     title: "Cleaning"
   - name: "Makeup"
     topHead: 
-    head-true: "true"
     googImg: "1gmP3Yfoyb8gS7LTCxGrs2YX7xdrMfxFQ"
     title: "Makeups"
