@@ -7,7 +7,7 @@
     display:none; 
   }
 .iconShwCsOtrBx {
-  margin: 32px 20px; 
+  margin: 32px 8px; 
 }
 .iconShwCs-itrBx {
 border:solid rgb(218, 218, 218) 1.5px; 
@@ -131,15 +131,19 @@ alert("{{ x }}");
 <div class="iconShwCsOtrBx moduleCstm">
 <div class="iconShwCs-itrBx">
   <div class="iconShwCsR1">
+    {% if x.cardHead %}
     <div class="iconShwCsR1C1">
 
       <div>{{ x.cardHead }}</div>
       <div class="cardDescX01">{{ x.cardDesc }}</div>
 
     </div>
+    {% endif %}
+    {% if x.cardToolTip %}
     <div class="iconShwCsR1C2">
       <div class="moreCardIcon-{{ include.cardDByml }}"><i class="far fa-question-circle"></i></div>
     </div>
+    {% endif %}
   </div>
   {% if x.cardToolTip %}<div class="cardToolTip-{{ include.cardDByml }}">{{ x.cardToolTip }}</div>{% endif %}
 
