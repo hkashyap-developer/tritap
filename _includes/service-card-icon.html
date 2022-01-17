@@ -125,9 +125,7 @@ border-radius:4px;
 <body>
 {% assign dbObj = include.cardDByml %}
 {% assign x = site.data[dbObj] %}
-<script>
-alert("{{ x }}");
-</script>
+
 <div class="iconShwCsOtrBx moduleCstm">
 <div class="iconShwCs-itrBx">
   <div class="iconShwCsR1">
@@ -152,7 +150,7 @@ alert("{{ x }}");
       {% for servlist in x.serviceIcons %}
       <div class="{{ include.cardDByml }}-iconShwCsR2Col">
         <div>{% if servlist.topHead %}<span class="topHdCstm">{{ servlist.topHead }}</span>{% endif %}</div>
-        <div class="imgWrapServ" style="margin:{{ include.iconMarg }}"><img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%"></div>
+        <div class="imgWrapServ" style="margin:{{ include.iconMarg }};"><img src="https://drive.google.com/uc?export=view&id={{ servlist.googImg }}" width="100%"></div>
         <div><p class="servLstCstm">{{ servlist.title }}</p></div>
       </div>
       {% endfor %}

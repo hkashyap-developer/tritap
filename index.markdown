@@ -10,5 +10,5 @@ layout: home
 {% include service-card-icon.html cardDByml="service-card-icon-4" iconWidth="33.33%" iconMarg="0px" %}
 {% include service-card-icon.html cardDByml="service-card-icon-3" iconWidth="100%"%}
 {% include service-card-icon.html cardDByml="service-card-icon-2" iconWidth="50%"%}
-{% include faq.html %}
+{% include faq.html cardDByml2="faqdb" %}
 {% include footer.html %}

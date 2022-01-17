@@ -1,5 +1,9 @@
-<!DOCTYPE html>
-<html>
+
+
+{% assign dbObj2 = include.cardDByml2 %}
+{% assign x = site.data[dbObj2] %}
+
+
 <head>
 <style>
 button.accordion {
@@ -65,19 +69,14 @@ p.accordParaCont {
 
 </head>    
 <body>
-test
+
     <div class="cstmAccContOtrBx" style="margin:{{ include.bxMarn }};">
         <div class="containerx01">
 
-            {% assign test = include.bxMarn %} 
-            {% assign flagVar = site.data[test]  %}
 
-            <script>
-            alert("{{ site.data[test] }}");
-             </script>
-            <h2>{{ flagVar.heading }}</h2>
+            <h2>{{ x.title }}</h2>
 
-            {% for faqs in site.data.faq.quesAns %}
+            {% for faqs in x.quesAns %}
             
                 <div class="cstmAccOtrBx">
                 <button class="accordion">{{ faqs.question }}</button>
@@ -114,4 +113,7 @@ accordionBtns.forEach((accordion) => {
   };
 });
 </script>
-</html>
+
+
+
+
