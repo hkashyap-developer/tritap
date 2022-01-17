@@ -7,7 +7,7 @@ categories: jekyll update
 img-url: "https://drive.google.com/uc?export=view&id=1MhYwAOYGLWCJn81fRb87smAXJrDpChyP" 
 shop-db: "pizza-hood"
 comments: "true"
-permalink: "/testx01"
+permalink: "tritap/testx01"
 ---
 
 <style>
