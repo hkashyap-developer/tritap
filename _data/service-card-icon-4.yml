@@ -2,7 +2,7 @@ cardHead: "Upto 20% off 🛍️"
 dabasID: "super-market2"
 cardDesc: "Exclusive discounts only for sector 68."
 footerCTAtxt: 
-cardToolTip: 
+cardToolTip: "Great Services, premium experience. This is what we are known for"
 
 serviceIcons:
   - name: "Cleaning"
