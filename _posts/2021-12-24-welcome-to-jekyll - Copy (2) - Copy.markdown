@@ -16,7 +16,6 @@ permalink: "tritap/testx01"
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
   font-family: 'Outfit', sans-serif;
-  color:red; 
 }
 h1, h2 {
   font-family: 'Outfit', sans-serif;
@@ -113,6 +112,13 @@ span.cstmQtyPicker {
 }
 .shopChkOtBtn.active { 
   display:block; 
+}
+
+
+@media(max-width:520px) {
+  .shopMainFlex {
+    flex-direction:column; 
+  }
 }
 
 </style>
