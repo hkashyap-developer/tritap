@@ -28,7 +28,6 @@ h1, h2 {
   border:solid black 2px;
   padding:20px; 
   max-width:400px;
-  min-width:360px;
   margin:0 auto; 
     margin-bottom:20px; 
     border-radius:4px; 
@@ -118,6 +117,10 @@ span.cstmQtyPicker {
 @media(max-width:520px) {
   .shopMainFlex {
     flex-direction:column; 
+  }
+  .shopPgR1C1, .shopPgR1C2, .shopPgR1C3 {
+    flex:1; 
+    padding:0px 12px; 
   }
 }
 
