@@ -9,7 +9,7 @@ serviceIcons:
     topHead: "Tri Tap"
     googImg: "1EUxtwrZJ1v-UB1gqdH__Adqec9PIX1mA"
     title: "Cleaning"
-    serviceURL: "/testx01"
+    serviceURL: "tritap/testx01"
   - name: "Makeup"
     topHead: "20% OFF"
     googImg: "1n57KCKFndV8pWH4yVVMzFQC-MKY-JiZP"
