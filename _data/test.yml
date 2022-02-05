@@ -1,0 +1,5 @@
+global:
+  - attr: Shop Name
+    val: Dhobi Ghaat
+  - attr: Shop ID
+    val: MIHU-DG

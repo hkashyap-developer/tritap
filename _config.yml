@@ -32,6 +32,10 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+algolia:
+  application_id: 'YL32EL7W2I' 
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

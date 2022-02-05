@@ -4,6 +4,9 @@
 
 layout: home
 ---
+{% include mytest.html %}
+
+{% comment %}
 
 {% include hero-home.html %}
 {% include service-card-icon.html cardDByml="service-card-icon" iconWidth="25%"%}
@@ -12,3 +15,5 @@ layout: home
 {% include service-card-icon.html cardDByml="service-card-icon-2" iconWidth="50%"%}
 {% include faq.html cardDByml2="faqdb" bxMarn="20px 12px;" %}
 {% include footer.html %}
+
+{% endcomment %}

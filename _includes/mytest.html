@@ -1,0 +1,269 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+    
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+    
+    
+    .pageHead {
+      text-align:center; 
+      font-family:tahoma;
+      font-weight:100; 
+      text-transform: uppercase; 
+      letter-spacing:4px; 
+      padding:28px 0px 40px 0px;
+
+    }
+    .otrBx {
+      width:10 0%; 
+      background-color: #f7f7f7; 
+      height:80vh; 
+
+      overflow:scroll;
+
+      display:flex; 
+      flex-direction:row; 
+      align-items:center; 
+    
+      position:relative; 
+    }
+
+    .inrBx {
+       min-width:80%;
+        background-color:yellow; 
+        margin:10%;
+        padding:40px; 
+    }
+    
+    .allLev {
+        display:none; 
+    }
+    .lev1, .lev2 {
+      display:block; 
+    }
+    .levelUpBtn {
+      font-size:22px;
+      padding:6px 12px;  
+    }
+
+.otrMostBx {
+  max-width:1200px; 
+  margin:0 auto; 
+  border:solid black 10px; 
+  border-radius:8px; 
+  margin-bottom:40px; 
+}
+.backBtn {
+  position:absolute;
+  top:40px;
+  right:40px;
+  font-size:22px;
+  padding:6px 12px; 
+}
+
+.varContainer {
+  background-color:red;
+  color:white;  
+  position:fixed; 
+  height:200px; 
+  width:200px; 
+  left:80px; 
+  top:120px; 
+  z-index:9999999;
+  padding:20px; 
+}
+
+</style>
+</head>
+    
+    <body onload="this22()">
+    
+        <h1 class="pageHead">Level Counter</h1>
+
+
+        <div class="varContainer">
+             <div class="levelVarOtrBx">Level: <span id="levelVar">1</span></div>
+        </div>
+
+    <div class="otrMostBx">    
+    <div class="otrBx" >
+    
+        <div class="allLev lev1 inrBx" >
+        <h2 class=" levelHead ">DATA LIST <span class="levelHeadCtr">1</span></h2>
+          
+
+            <ul>
+            {% for objVar1 in site.data.test.global %}
+              <li><a href="https://github.com/{{ member.github }}">{{ objVar1.attr }} : {{ objVar1.val }}</a></li><br>
+            {% endfor %}
+            </ul>
+          
+          
+            
+          <script>
+    
+            function enterLev(levelCtr) {
+               
+            }
+       
+    
+        </script>
+        <button class="levelUpBtn" onclick="levelUp();">Next Level</button>
+        <button class="backBtn  lev1Bak" onclick="levelDown();">Back</button>
+        </div>
+    
+        <div class="allLev lev2 inrBx" >
+            <h2 class=" levelHead">Level <span class="levelHeadCtr">2</span></h2>
+            <button class="levelUpBtn" onclick="levelUp();">Next Level</button>
+            <button class="backBtn  lev2Bak" onclick="levelDown();">Back</button>
+    
+        </div>
+    
+    
+        <div class="allLev lev3 inrBx" >
+            <h2 class="levelHead">Level <span class="levelHeadCtr">3</span></h2>
+       
+    
+        </div>
+    
+    
+        <div class="allLev lev4 inrBx" >
+            <h2 class="levelHead ">Level <span class="levelHeadCtr">4</span></h2>
+       
+    
+        </div>
+    
+    </div>
+</div>
+    
+    </body>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+    /******************************/
+    /******************************/
+    /* I PUT SCRIPT HERE, MY WISH */
+    /******************************/
+    /******************************/
+
+
+    
+    /**************************************/
+    /**************************************/
+    /*          GLOBAL VARIABLE           */
+    /**************************************/
+    /**************************************/
+
+    var initCtr=1; 
+
+ 
+
+
+    /**************************************/
+    /**************************************/
+    /*               LEVEL UP             */
+    /**************************************/
+    /**************************************/
+
+
+    function levelUp() {
+
+      initCtr++;
+
+      $(".allLev").css("display", "none");
+      plchldrlev=  ".lev" + initCtr;
+      $(plchldrlev).css("display", "block");
+
+
+      document.getElementById("levelVar").innerHTML=initCtr;
+    
+    }
+
+
+    /**************************************/
+    /**************************************/
+    /*            LEVEL DOWN              */
+    /**************************************/
+    /**************************************/
+
+
+    function levelDown() {
+        initCtr--;
+        alert(initCtr);       
+        document.getElementById("levelVar").innerHTML=initCtr;
+        if(initCtr==1) {
+          plchldrlev= "." + plchldrlev + "lev" + (initCtr) + "Bak";
+          $(plchldrlev).css("display", "none");
+        } 
+
+
+        var levTemp=".lev";
+      levTemp+=initCtr;
+   
+      var plchldrlev = ".";
+      plchldrlev= plchldrlev + "lev" + (initCtr+1) + "Bak";
+
+
+
+   
+
+
+
+    }
+    
+
+
+    /**************************************/
+    /**************************************/
+    /* THIS FUNCTION RUNS ON THE PAGELOAD */
+    /**************************************/
+    /**************************************/
+    
+    function firstLoadFun() {
+      /* Only show level 1 on page load */
+      $(".allLev").css("display", "none");
+      $(".lev1").css("display", "block");
+    }
+
+    window.onload = firstLoadFun();
+
+    </script>
+
+</HTML>
