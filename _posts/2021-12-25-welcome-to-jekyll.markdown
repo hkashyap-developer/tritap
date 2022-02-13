@@ -158,7 +158,7 @@ span.cstmQtyPicker {
   {% endif %}
   </div>
   <div class="prdDesc-r1c2">
-  <img src="{{ product.img-url }}" width="100%">
+  <img src="update\2021\12\24{{ product.img-url }}" width="100%">
   </div>
 </div>
 <hr style="margin-top:12px; margin-bottom:8px; border-color:white; background-color:white;">
